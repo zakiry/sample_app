@@ -10,13 +10,12 @@ group :development, :test do
   gem 'spork-rails'
   gem 'guard-spork'
   gem 'childprocess'
-  gem 'spork'
+  gem 'growl'
 end
 
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
-  gem 'growl'
 end
 
 gem 'sass-rails', '4.0.2'
