@@ -1,5 +1,7 @@
 require 'active_support/inflector'
 
+notification :growl
+
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
@@ -18,7 +20,7 @@ require 'active_support/inflector'
 #  * zeus: 'zeus rspec' (requires the server to be started separetly)
 #  * 'just' rspec: 'rspec'
 #guard :rspec, cmd: 'bundle exec rspec' do
-guard :rspec, cmd: 'bundle exec rspec', all_after_pass: false, cli: '--drb' do
+guard :rspec, cmd: 'bundle exec rspec', all_after_pass: false do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
